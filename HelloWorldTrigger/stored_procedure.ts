@@ -34,7 +34,11 @@ async function STORED_PROCEDURE_GET_USERS() {
         }
         return result.recordset;
     } catch (err) {
-        throw err;
+        throw {
+            message : "Database error!",
+            statusCode : 500
+        }
+
     }
 }
 
