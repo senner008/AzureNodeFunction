@@ -2,7 +2,9 @@ import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 import { setupTable } from "./sqlSetup";
 import { STORED_PROCEDURE_GET_USERS } from "./stored_procedure";
 
-setupTable();
+if (process.env.DEVELOPMENT) {
+    setupTable();
+}
 
 function validateName(name) {
     if (!/^[a-zA-Z]*$/.test(name)) {

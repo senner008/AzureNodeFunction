@@ -1,12 +1,10 @@
 
 const tablesNames = {
-    user: "user_table",
-    subscription: "subscription",
-    userSubscription: "user_subscription"
+    user: "user_table"
 }
 
 const procedureNames = {
-    GET_USERS: "sp_get_users",
+    GET_USERS: "sp_get_users"
 }
 
 export {
