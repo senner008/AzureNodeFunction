@@ -20,7 +20,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         context.res = {
             // status: 200, /* Defaults to 200 */
             // body: "Hello " + (req.query.name || req.body.name),
-            body : usersResponse[0]
+            body : usersResponse[0].user_name
         };
     }
     else {
